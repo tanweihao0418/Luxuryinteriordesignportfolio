@@ -260,22 +260,18 @@ export function Portfolio() {
 
         {/* Draggable Horizontal Scroll Section */}
         <div className="relative -mx-6 md:-mx-12">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
-            style={{ 
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
-            whileTap={{ cursor: 'grabbing' }}
-            drag="x"
-            dragConstraints={{ left: -1000, right: 0 }}
-            dragElastic={0.1}
-          >
-            <div className="flex gap-6 md:gap-8 px-6 md:px-12 pb-8">
+          <div className="overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="flex gap-6 md:gap-8 px-6 md:px-12 pb-8 cursor-grab active:cursor-grabbing"
+              drag="x"
+              dragConstraints={{ left: -2000, right: 0 }}
+              dragElastic={0.1}
+              dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+            >
               {/* Card 1: Projects Delivered - Large Card with Overlay */}
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
@@ -452,8 +448,8 @@ export function Portfolio() {
                   </div>
                 </div>
               </motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* Scroll Hint */}
           <motion.div

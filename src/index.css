@@ -1187,10 +1187,6 @@
     overflow: hidden;
   }
 
-  .overflow-x-auto {
-    overflow-x: auto;
-  }
-
   .rounded {
     border-radius: .25rem;
   }
