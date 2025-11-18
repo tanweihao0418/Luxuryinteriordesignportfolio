@@ -72,7 +72,7 @@ export function About() {
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 className="group relative"
               >
-                <div className="relative bg-[#2a2a2a] backdrop-blur-sm p-6 md:p-8 transition-all duration-500 hover:bg-[#333333]">
+                <div className="relative bg-[#2a2a2a] backdrop-blur-sm p-6 md:p-8 transition-all duration-500 hover:bg-[#333333] h-full flex flex-col">
                   {/* Accent line on hover */}
                   <motion.div
                     className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-lime-400"
